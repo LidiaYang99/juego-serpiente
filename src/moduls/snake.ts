@@ -43,7 +43,7 @@ class Snake {
         // X的合法值在0-290
         if (value < 0 || value > 290) {
             // 如果进入设置的这个范围，就说明撞墙了
-            throw new Error('蛇撞墙了！');
+            throw new Error('Oops! ');
         }
 
         // 修改X时，是在修改垂直坐标。蛇左右移动，当蛇向左移动时，不能向有调头。反之也一样。
@@ -78,7 +78,7 @@ class Snake {
         // Y的合法值在0-290
         if (value < 0 || value > 290) {
             // 如果进入设置的这个范围，就说明撞墙了
-            throw new Error('蛇撞墙了！');
+            throw new Error('Oops!');
             // 为了页面不直接显示报错，在gamecontrol组件内使用try,catch
         }
 
@@ -144,7 +144,7 @@ class Snake {
 
             if (this.X === bd.offsetLeft && this.Y === bd.offsetTop) {
                 // 如果进入判断，则说明蛇头撞到了墙壁，游戏结束
-                throw new Error('撞到自己了！ GAME OVER!')
+                throw new Error('Oops! GAME OVER!')
             }
 
 
